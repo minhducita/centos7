@@ -1,4 +1,4 @@
-## Hướng dẫn cài đặt trên CentOS 7
+## Cài đặt Server CentOS 7 với các thành phần trên VirtualBox
 
 - [1. Giới thiệu](#1)
 - [2. Các bước tiến hành](#2)
