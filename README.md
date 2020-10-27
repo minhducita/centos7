@@ -238,16 +238,59 @@ KeepAlive On
 ```
 Cuối cùng khởi động lại Apache service httpd restart
 
-Giờ nếu bạn có một file .html thì khi truy cập địa chỉ http://ip sẽ mở file đó. Hoặc sau khi cài PHP thì nếu có index.php thì truy cập http://ip sẽ chạy PHP
-
-
-
-
+Giờ nếu bạn có một file .html thì khi truy cập địa chỉ http://192.168.1.6 sẽ mở file đó. Hoặc sau khi cài PHP thì nếu có index.php thì truy cập http://192.168.1.6 sẽ chạy PHP
 
 <a name="7" />
 	
 ### 7. Cài đặt MySQL
+Để tải code MySQL về và buil đầu tiên cài đặt tiên ích wget
+```sh
+yum install wget
+```
+Sau đó tải vào địa chỉ sau Repo MySQL tìm tên phiên bản mong muốn
+
+Ví dụ tìm thấy tên mysql57-community-release-el7-9.noarch.rpm là phiên bản phù hợp muốn cài đặt, thì tải về với lệnh sau:
+```sh
+wget https://repo.mysql.com/mysql57-community-release-el7-9.noarch.rpm
+```
+Cập nhật Repo
+```sh
+rpm -ivh mysql57-community-release-el7-9.noarch.rpm
+yum update
+```
+Giờ đã có thể dùng Yum để cài đặt MySQL
+```sh
+yum install mysql-community-server
+```
+Chạy MySQL
+```sh
+service mysqld start
+```
+Thiết lập MySQL tự động chạy
+```sh
+chkconfig mysqld on
+```
+Giờ đã có MySQL trong hệ thống, hãy tham khảo về Quản trị cơ bản MySQL
+
+Password mặc định của root quản trị MySQL tự động sinh ra trong log
+```sh
+grep 'temporary password' /var/log/mysqld.log
+```
+
 
 <a name="8" />
 	
 ### 8. Cài đặt PHP
+Ở đây mình cài đặt là PHP 7.2
+```sh
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+yum install yum-utils
+yum-config-manager --enable remi-php72
+yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo
+```
+Sau khi cài đặt gõ lệnh kiểm tra
+```sh
+php -v
+```
+
