@@ -76,6 +76,6 @@ cat /etc/redhat-release
 
 <a name="4" />
 	
-### 4. Chuẩn bị VirtualBox, CentOS 7
+### 4. Thiết lập IP tĩnh cho CentOS
 
 
