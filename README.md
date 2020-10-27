@@ -441,3 +441,56 @@ curl -sS https://getcomposer.org/installer | php
 composer --version
 ```
 ![alt text](https://blog.hostvn.net/wp-content/uploads/2020/03/Screenshot_21-3.png?raw=true)
+
+Và bây giờ chung ta tiến hành cài project laravel trong thư mục /var/www/html/ với tên là web-example
+```sh
+cd /var/www/html/
+composer create-project --prefer-dist laravel/laravel web-example "5.8.*"
+```
+sau đó cd vào thư mục code của bạn chạy lệnh sau:
+```sh
+cd /var/www/html/ web-example
+composer install
+```
+Bước này cần chút thời gian để nó download những package cần thiết về. Sau khi chạy xong bạn tiếp tục chạy lệnh sau để cấp quyền cho storage của mình
+```sh
+chmod –R  775 /var/www/yoursite/app/storage
+```
+hoặc nếu đang ở trong project
+```sh
+chmod –R  775 /storage
+```
+Tiếp đến chỉnh sửa file Virtual Host để trỏ đến thư mục public của project laravel
+```sh
+vi /etc/httpd/conf.d/vihost.conf
+```
+Sau đó thêm nội dung như bên dưới và lưu file lại
+```sh
+<VirtualHost *:80>
+    DocumentRoot "/var/www/html/web-example/public"
+    ServerName web-example.com
+    ErrorLog "/var/log/centos-error.log"
+    CustomLog "/var/log/centos-error.log" common
+	<Directory "/var/www/html/web-example/public">
+		Options All
+		AllowOverride All
+		Require all granted
+	</Directory>
+</VirtualHost>
+```
+Khởi động lại Apache
+```sh
+service httpd restart
+```
+Cuối cùng bạn cần Config database của mình:
+```sh
+mysql -u root -p
+```
+sau đó nhập password mysql đẻ login vào mysql rồi tạo database
+```sh
+create database laravel
+```
+cuối cùng bạn config database cho file .env là hoàn tất cài đặt rồi:
+```sh
+DB_DATABASE=laravel
+```
