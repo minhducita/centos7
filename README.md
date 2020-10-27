@@ -426,5 +426,18 @@ Tiếp theo bạn nhập nội dung sau vào cuối file host và lưu lại.
 192.168.1.99 web-example.com
 ```
 Trong đó dãy IP chính là địa chỉ IP của máy ảo và web-example.com chính là tên domain ảo mà bạn muốn.
-Bây giờ truy cập vào web-example.com để tận hưởng thành quả nào.
 
+<a name="11 />
+	
+### 11. Tạo project laravel
+Trước tiên chúng ta phải cài đặt Composer bằng lệnh
+```sh
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+```
+Tiếp theo các bạn có thể dùng lệnh sau để kiểm tra phiên bản Composer
+```sh
+curl -sS https://getcomposer.org/installer | php
+composer --version
+```
+![alt text](https://blog.hostvn.net/wp-content/uploads/2020/03/Screenshot_21-3.png?raw=true)
