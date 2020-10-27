@@ -214,6 +214,34 @@ Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserv
 
 ![alt text](https://xuanthulab.net/photo/webserver-4394.PNG?raw=true)
 
+Bỏ trang webcome mặc định của Apache
+```sh
+rm -f /etc/httpd/conf.d/welcome.conf
+```
+Mở file cấu hình Apache ra chỉnh sửa
+```sh
+vi  /etc/httpd/conf/httpd.conf
+```
+Mặc định trong đó có các thiết lập để chạy các file tại /var/www/html
+
+Giờ thiết lập một số thông số sau
+```sh
+# dòng 151
+AllowOverride All
+
+# dòng 164 - tự động đọc index.html hoặc index.php truy cập thư mục
+DirectoryIndex index.html index.php
+
+
+# Thêm vào cuối
+KeepAlive On
+```
+Cuối cùng khởi động lại Apache service httpd restart
+
+Giờ nếu bạn có một file .html thì khi truy cập địa chỉ http://ip sẽ mở file đó. Hoặc sau khi cài PHP thì nếu có index.php thì truy cập http://ip sẽ chạy PHP
+
+
+
 
 
 <a name="7" />
