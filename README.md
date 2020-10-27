@@ -2,11 +2,12 @@
 
 - [1. Chuẩn bị VirtualBox, CentOS 7](#1)
 - [2. Tạo máy ảo để cài CentOs](#2)
-	- [2.1 Cài đặt LAMP Stack](#21)
-	- [2.2 Cấu hình MariaDB](#22)
-	- [2.3 Tạo User và Database cho NextCloud](#23)
-	- [2.4 Tải và giải nén NextCloud](#24)
-	- [2.5 Cấu hình NextCloud](#25)
+- [3. Tạo máy ảo để cài CentOs](#3)
+- [4. Tạo máy ảo để cài CentOs](#4)
+- [5. Tạo máy ảo để cài CentOs](#5)
+- [6. Tạo máy ảo để cài CentOs](#6)
+- [7. Tạo máy ảo để cài CentOs](#7)
+- [8. Tạo máy ảo để cài CentOs](#8)
 	
 <a name="1" />
 	
