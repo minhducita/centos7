@@ -210,7 +210,7 @@ Sau đó khởi động lại Firewall
 ```sh
 firewall-cmd --reload
 ```
-Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ http://ip, ví dụ máy ảo có IP là 192.168.1.6 thì địa chỉ truy cập web lúc này là http://192.168.1.6, kết quả là:
+Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ http://ip, ví dụ máy ảo có IP là 192.168.1.99 thì địa chỉ truy cập web lúc này là http://192.168.1.99, kết quả là:
 
 ![alt text](https://xuanthulab.net/photo/webserver-4394.PNG?raw=true)
 
@@ -238,7 +238,7 @@ KeepAlive On
 ```
 Cuối cùng khởi động lại Apache service httpd restart
 
-Giờ nếu bạn có một file .html thì khi truy cập địa chỉ http://192.168.1.6 sẽ mở file đó. Hoặc sau khi cài PHP thì nếu có index.php thì truy cập http://192.168.1.6 sẽ chạy PHP
+Giờ nếu bạn có một file .html thì khi truy cập địa chỉ http://192.168.1.99 sẽ mở file đó. Hoặc sau khi cài PHP thì nếu có index.php thì truy cập http://192.168.1.99 sẽ chạy PHP
 
 <a name="7" />
 	
