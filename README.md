@@ -152,3 +152,22 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.1.1
 ```
 Địa chỉ IP tĩnh ở trên (192.168.1.99) bạn gán theo hệ thống mạng. Chỉnh xong khởi động lại mạng service network restart
+
+
+<a name="6" />
+	
+### 6. Cài đặt Apache
+Đầu tiền cần đảm bảo đã thiết lập hostname, bằng cách gõ lệnh hostname, nếu chưa thiết lập xem lại phần thiết lập mạng ở trên.
+Chạy lệnh cài Apache
+```sh
+yum -y update
+yum install httpd
+```
+
+<a name="7" />
+	
+### 7. Cài đặt MySQL
+
+<a name="8" />
+	
+### 8. Cài đặt PHP
