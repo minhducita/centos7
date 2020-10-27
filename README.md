@@ -3,13 +3,14 @@
 - [1. Chuẩn bị VirtualBox, CentOS 7](#1)
 - [2. Tạo máy ảo để cài CentOs](#2)
 - [3. Cài đặt CentOS](#3)
-- [4. Thiết lập IP tĩnh cho CentOS](4)
-- [5. Cài đặt Apache](#5)
-- [6. Cài đặt MySQL](#6)
-- [7. Cài đặt PHP](#7)
-- [8. Cài đặt phpMyAdmin](#8)
-- [9. Cấu hình Virtual Host cho Domain](#9)
-- [10. Tạo project laravel](#10)
+- [4. Cài đặt mạng](#4)
+- [5. Thiết lập IP tĩnh cho CentOS](5)
+- [6. Cài đặt Apache](#6)
+- [7. Cài đặt MySQL](#7)
+- [8. Cài đặt PHP](#8)
+- [9. Cài đặt phpMyAdmin](#9)
+- [10. Cấu hình Virtual Host cho Domain](#10)
+- [11. Tạo project laravel](#11)
 	
 <a name="1" />
 	
