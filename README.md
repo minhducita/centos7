@@ -416,3 +416,15 @@ Khởi động lại Apache
 ```sh
 service httpd restart
 ```
+Tiếp theo chúng ta cấu hình file hosts
+Bạn mở file hosts bằng chương trình notepad nằm trong thư mục có đường dẫn sau:
+```sh
+C:\Windows\System32\drivers\etc.
+```
+Tiếp theo bạn nhập nội dung sau vào cuối file host và lưu lại.
+```sh
+192.168.1.99 web-example.com
+```
+Trong đó dãy IP chính là địa chỉ IP của máy ảo và web-example.com chính là tên domain ảo mà bạn muốn.
+Bây giờ truy cập vào web-example.com để tận hưởng thành quả nào.
+
