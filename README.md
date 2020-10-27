@@ -43,3 +43,10 @@ Tải file (ISO) của CentOS 7 tại: [Tải CentOS 7 ISO](https://www.centos.o
 - Tại mục Storage chọn Controller: IDE > Empty (đây là ổ DVD ảo), sau đó bấm vào biểu tượng ổ đĩa và chọn gắn file ISO CentOS đã tải về ở trên vào.
 
 ![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-15-4379.png?raw=true)
+
+
+<a name="3" />
+	
+### 3. Cài đặt CentOS
+-Chọn máy ảo và nhấn vào Start, máy ảo sẽ khởi động và tự động boot từ DVD CentOS được gắn vào.
+
