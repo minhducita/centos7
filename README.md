@@ -129,3 +129,9 @@ ip a
        valid_lft forever preferred_lft forever
 [root@mydomain ~]#
 ```
+Như vậy đã thiết lập mang xong cho CentOS, ở trường hợp trên đã được cấp phát IP là 192.168.1.6
+Gõ lại lệnh sau để cập nhật các bản vá mới nhất của CentOS
+```sh
+yum -y update
+```
+
