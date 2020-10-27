@@ -163,6 +163,58 @@ Chạy lệnh cài Apache
 yum -y update
 yum install httpd
 ```
+Sau khi cài xong thì hãy chạy Apache
+```sh
+service httpd start
+```
+Để kiểm tra xem chạy OK chưa thì dùng lệnh:
+```sh
+# service httpd status
+
+httpd.service - The Apache HTTP Server
+Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+Active: active (running) since Sat 2018-11-03 06:32:09 EDT; 18min ago
+Docs: man:httpd(8)
+   man:apachectl(8)
+```
+Thiết lập để khởi động cùng hệ thống:
+```sh
+systemctl enable httpd.service
+```
+Apache đã hoạt động, tuy nhiên từ trình duyệt truy cập vào địa chỉ IP của máy ảo vẫn không thấy Apache hoạt động trả về trang web vì bị Firewall cản lại. Đến đây kiểm tra xem Firewall đang cho những dịch vụ nào truyền dữ liệu ra ngoài bằng lệnh
+```sh
+# firewall-cmd --list-all
+
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: enp0s3
+  sources:
+  services: ssh dhcpv6-client
+  ports:
+  protocols:
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+```
+Ở kết quả trên thì có các dịch vụ cho phép truyền dữ liệu ra ngoài đó là ssh, dhcpv6-client và chưa có Apache (httpd)
+
+Cho thêm Apache được phép truyền dữ liệu ra ngoài bằng lệnh
+```sh
+firewall-cmd --add-service=http --permanent
+firewall-cmd --add-service=https --permanent
+```
+Sau đó khởi động lại Firewall
+```sh
+firewall-cmd --reload
+```
+Lúc này từ trình duyệt ở máy host, có thể truy cập đến Webserver máy ảo bằng địa chỉ http://ip, ví dụ máy ảo có IP là 192.168.1.6 thì địa chỉ truy cập web lúc này là http://192.168.1.6, kết quả là:
+
+![alt text](https://xuanthulab.net/photo/webserver-4394.PNG?raw=true)
+
+
 
 <a name="7" />
 	
