@@ -30,3 +30,16 @@ Tải file (ISO) của CentOS 7 tại: [Tải CentOS 7 ISO](https://www.centos.o
 - Từ hộp thoại trên, chọn Create a virtual hard disk now, rồi nhấn Create. Hộp thoại tạo ra để bạn thiết lập đĩa ảo cho máy. Có thể cấu hình các mục như hình, rồi bấm Create:
 
 ![alt text](https://camo.githubusercontent.com/e0683eb347bbad391d975debc2d48d645820cc6a/68747470733a2f2f7875616e7468756c61622e6e65742f70686f746f2f6361692d6461742d63656e746f732d7669727475616c626f782d312d343337342e504e473f7261773d74727565?raw=true)
+
+- **Bước 3**:
+- Từ danh sách các máy áo trong VirtualBox, nhấn phải chuột vào máy ảo mới tạo ra và chọn Setting để thiết lập thêm.
+
+![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-15-4377.png?raw=true)
+
+- Chọn Display thiết lập bộ nhớ cho màn hình, cũng chọn Enable 3D Acceleration
+
+![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-4-4378.PNG?raw=true)
+
+- Tại mục Storage chọn Controller: IDE > Empty (đây là ổ DVD ảo), sau đó bấm vào biểu tượng ổ đĩa và chọn gắn file ISO CentOS đã tải về ở trên vào.
+
+![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-15-4379.png?raw=true)
