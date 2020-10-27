@@ -1,2 +1,2 @@
-# CÀI ĐẶT CENTOS7 + APACHE + PHP + MYSQL + PHPMYADMIN + LARAVEL
+# Hướng dẫn cài đặt centos 7
 centos7+apache+php7.2+mysql+laravel+phpmyadmin
