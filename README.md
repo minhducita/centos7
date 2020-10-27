@@ -151,3 +151,4 @@ IPADDR=192.168.1.99
 NETMASK=255.255.255.0
 GATEWAY=192.168.1.1
 ```
+Địa chỉ IP tĩnh ở trên (192.168.1.99) bạn gán theo hệ thống mạng. Chỉnh xong khởi động lại mạng service network restart
