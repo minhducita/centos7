@@ -381,10 +381,38 @@ Alias /phpmyadmin /usr/share/phpMyAdmin
 ```
 
 Cuối cùng khởi động lại apache để load cấu hình
- ```sh
+```sh
 systemctl restart httpd
 ```
 
 Để truy cập giao diện phpMyAdmin, hãy mở trình duyệt của bạn và truy cập http://192.168.1.99/phpmyadmin:
 
 ![alt text](https://blog.hostvn.net/wp-content/uploads/2020/05/Screenshot_54.png?raw=true)
+
+<a name="10" />
+	
+### 10. Cấu hình Virtual Host cho Domain
+Trên cùng 1 VPS bạn có thể thêm nhiều domain, mỗi domain sẽ sử dụng một thư mục riêng biệt. Chính vì thế bạn phải tạo Virtual Hosts, ngày cả khi bạn chạy 1 domain vẫn nên tạo để sau này dễ dàng sửa đổi.
+
+Đầu tiên bạn tao một file vhost.conf trong thư mục /etc/httpd/conf.d
+```sh
+vi /etc/httpd/conf.d/vihost.conf
+```
+Sau đó thêm nội dung như bên dưới và lưu file lại
+```sh
+<VirtualHost *:80>
+    DocumentRoot "/var/www/html/web-example"
+    ServerName web-example.com
+    ErrorLog "/var/log/centos-error.log"
+    CustomLog "/var/log/centos-error.log" common
+	<Directory "/var/www/html/web-example">
+		Options All
+		AllowOverride All
+		Require all granted
+	</Directory>
+</VirtualHost>
+```
+Khởi động lại Apache
+```sh
+service httpd restart
+```
