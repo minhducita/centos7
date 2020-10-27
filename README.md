@@ -21,3 +21,4 @@ Tải file (ISO) của CentOS 7 tại: [Tải CentOS 7 ISO](https://www.centos.o
 <a name="2" />
 
 ### 2. Tạo máy ảo để cài CentOs
+- **Bước 1**: Cài đặt và cấu hình Apache
