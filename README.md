@@ -50,3 +50,21 @@ Tải file (ISO) của CentOS 7 tại: [Tải CentOS 7 ISO](https://www.centos.o
 Chọn máy ảo và nhấn vào Start, máy ảo sẽ khởi động và tự động boot từ DVD CentOS được gắn vào.
 ![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-15-4380.PNG?raw=true)
 
+Chờ một chút, sẽ tới màn hình tùy chọn đầu tiên để cài đặt.
+![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-15-4382.PNG?raw=true)
+
+Ở màn hình này bạn có thể chọn English rồi nhấn Continue, ở màn hình tiếp theo chờ một chút nó kiểm tra các mục như màn hình.
+![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-15-4384.PNG?raw=true)
+
+Chú ý ở mục này cần phải chọn ngay muc INSTALLATION DESTINATION nhằm chọn ổ đĩa để cài CentOS, khi chọn mục này hộp thoại như sau:
+![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-9-4385.PNG?raw=true)
+
+Đánh dấu, chọn ổ đĩa cứng cần cài đặt sau đó nhấn vào DONE, cuối cùng nhấn Begin installation
+Quá trình cài đặt CentOS sẽ bắt đầu
+![alt text](https://xuanthulab.net/photo/cai-dat-centos-virtualbox-15-4386.PNG?raw=true)
+
+Trong quá trình cài đặt đang diễn ra, bạn có thể chọn ROOT PASSWORD để đặt password cho user root (user root là user có quyền cao nhất để quản trị toàn bộ hệ thống server linux này).
+Chờ cho quá trình cài đặt kết thúc thì khởi động lại máy ảo, từ đây bạn đã có một máy ảo chạy hệ điều hành CentOS để làm Server nghiên cứu.
+![alt text](https://xuanthulab.net/photo/cai-dat-2-4387.PNG?raw=true)
+
+
