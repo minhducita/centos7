@@ -67,4 +67,9 @@ Trong quá trình cài đặt đang diễn ra, bạn có thể chọn ROOT PASSW
 Chờ cho quá trình cài đặt kết thúc thì khởi động lại máy ảo, từ đây bạn đã có một máy ảo chạy hệ điều hành CentOS để làm Server nghiên cứu.
 ![alt text](https://xuanthulab.net/photo/cai-dat-2-4387.PNG?raw=true)
 
+Sau khi khởi động lại, CentOS yêu cầu đăng nhập hệ thống, bạn nhập user là root và password đã đặt ở trên để login vào hệ thống. Từ đây bạn bắt đầu phiên làm việc với CentOS. Đầu tiên gõ lệnh xem phiên bản CentOS đang sử dụng.
+```sh
+cat /etc/redhat-release
+```
+
 
