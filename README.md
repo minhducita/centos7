@@ -1,7 +1,7 @@
 ## Cài đặt Server CentOS 7 với các thành phần trên VirtualBox
 
-- [1. Giới thiệu](#1)
-- [2. Các bước tiến hành](#2)
+- [1. Chuẩn bị VirtualBox, CentOS 7](#1)
+- [2. Tạo máy ảo để cài CentOs](#2)
 	- [2.1 Cài đặt LAMP Stack](#21)
 	- [2.2 Cấu hình MariaDB](#22)
 	- [2.3 Tạo User và Database cho NextCloud](#23)
