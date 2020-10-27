@@ -19,4 +19,5 @@ Trước tiên cần tải về VirtualBox sau đó chạy bộ cài để cài 
 Tải file (ISO) của CentOS 7 tại: [Tải CentOS 7 ISO](https://www.centos.org/download/), để sử dụng làm Server với giao diện dòng lệnh, chọn DVD ISO, trong các list ISO có thể chọn CentOS-7-x86_64-DVD-1804.iso (chọn các host ở Việt Nam tải cho nhanh)
 
 <a name="2" />
+
 ### 2. Tạo máy ảo để cài CentOs
