@@ -135,3 +135,19 @@ Gõ lại lệnh sau để cập nhật các bản vá mới nhất của CentOS
 yum -y update
 ```
 
+
+<a name="5" />
+	
+### 5. Thiết lập IP tĩnh cho CentOS
+Nếu muốn cấp phát IP tĩnh, cố định làm như sau:
+Mở file thiết lập mạng ra để chỉnh sửa
+```sh
+vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+```
+Cập nhật IP chính các thông số như sau, nếu chưa có thì gõ vào
+```sh
+BOOTPROTO=static
+IPADDR=192.168.1.99
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1
+```
