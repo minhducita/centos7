@@ -294,3 +294,97 @@ Sau khi cài đặt gõ lệnh kiểm tra
 php -v
 ```
 
+<a name="9" />
+	
+### 9. Cài đặt phpMyAdmin
+Để cài đặt PhpMyAdmin các bạn chỉ cần chạy lần lượt các lệnh sau
+```sh
+cd /usr/share
+wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.zip
+unzip phpMyAdmin-5.0.2-all-languages.zip
+mv phpMyAdmin-5.0.2-all-languages phpMyAdmin
+rm -rf phpMyAdmin-5.0.2-all-languages.zip
+rm -rf /usr/share/phpMyAdmin/setup
+```
+ Cấu hình phpMyAdmin
+ File cấu hình của PhpMyadmin là file config.inc.php. Trước tiên các bạn cần chạy lệnh sau
+ ```sh
+mv /usr/share/phpMyAdmin/config.sample.inc.php /usr/share/phpMyAdmin/config.inc.php
+```
+Tiếp theo mở file /usr/share/phpMyAdmin/config.inc.php
+ ```sh
+vi /usr/share/phpMyAdmin/config.inc.php
+```
+– Tìm
+ ```sh
+$cfg['blowfish_secret'] = '';
+```
+thêm một đoạn ký tự bất kỳ vào giữa cặp nháy đơn. Ví dụ:
+ ```sh
+$cfg['blowfish_secret'] = 'dsa123e12rwDSADs1few12tr3ewg3s2df3sAD';
+```
+– Tiếp theo thêm vào cuối file doạn code sau
+ ```sh
+$cfg['TempDir'] = '/usr/share/phpMyAdmin/tmp/';
+```
+Lưu file
+
+Sau đó các bạn cần tạo thư mục tmp cho PhpMyAdmin
+ ```sh
+mkdir -p /usr/share/phpMyAdmin/tmp
+chown -R nginx:nginx /usr/share/phpMyAdmin/tmp
+```
+Tiếp theo cấu hình vhost cho PhpMyAdmin
+Để có thể truy cập được PhpMyAdmin các bạn sẽ cần tại vhost cho nó. Tạo file /etc/httpd/conf.d/phpmyadmin.conf với nội dung sau
+ ```sh
+Alias /pma /usr/share/phpMyAdmin
+Alias /phpmyadmin /usr/share/phpMyAdmin
+ 
+<Directory /usr/share/phpMyAdmin/>
+    AddDefaultCharset UTF-8
+    <IfModule mod_authz_core.c>
+    # Apache 2.4
+    <RequireAny>
+        <RequireAll>
+            Require all granted
+        </RequireAll>
+    </RequireAny>
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        # Apache 2.2
+        Order Deny,Allow
+        Deny from All
+        Allow from All
+        Allow from ::1
+    </IfModule>
+</Directory>
+<Directory /usr/share/phpMyAdmin/log/>
+    Order Deny,Allow
+    Deny from All
+    Allow from None
+</Directory>
+<Directory /usr/share/phpMyAdmin/libraries/>
+    Order Deny,Allow
+    Deny from All
+    Allow from None
+</Directory>
+<Directory /usr/share/phpMyAdmin/templates/>
+    Order Deny,Allow
+    Deny from All
+    Allow from None
+</Directory>
+<Directory /usr/share/phpMyAdmin/tmp/>
+    Order Deny,Allow
+    Deny from All
+    Allow from None
+</Directory>
+```
+
+Cuối cùng khởi động lại apache để load cấu hình
+ ```sh
+systemctl restart httpd
+```
+
+Để truy cập giao diện phpMyAdmin, hãy mở trình duyệt của bạn và truy cập http://192.168.1.99/phpmyadmin:
+
+![alt text](https://blog.hostvn.net/wp-content/uploads/2020/05/Screenshot_54.png?raw=true)
