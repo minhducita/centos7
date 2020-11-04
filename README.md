@@ -427,7 +427,7 @@ Tiếp theo bạn nhập nội dung sau vào cuối file host và lưu lại.
 ```
 Trong đó dãy IP chính là địa chỉ IP của máy ảo và web-example.com chính là tên domain ảo mà bạn muốn.
 
-<a name="11 />
+<a name="11"/>
 	
 ### 11. Tạo project laravel
 Trước tiên chúng ta phải cài đặt Composer bằng lệnh
