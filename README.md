@@ -1,9 +1,9 @@
-## Cài đặt Server CentOS 7 với các thành phần trên VirtualBox 123
-
+## Cài đặt Server CentOS 7 với các thành phần trên VirtualBox 123á ádfsafsadf
+ 
 - [1. Chuẩn bị VirtualBox, CentOS 7](#1)
 - [2. Tạo máy ảo để cài CentOs](#2)
 - [3. Cài đặt CentOS](#3)
-- [4. Cài đặt mạng](#4)
+- [4. Cài đặt mạng](#4) 
 - [5. Thiết lập IP tĩnh cho CentOS](5)
 - [6. Cài đặt Apache](#6)
 - [7. Cài đặt MySQL](#7)
