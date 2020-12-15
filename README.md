@@ -1,4 +1,4 @@
-## Cài đặt Server CentOS 7 với các thành phần trên VirtualBox 123á ádfsafsadf
+## Cài đặt Server CentOS 7 với các thành phần trên VirtualBox
  
 - [1. Chuẩn bị VirtualBox, CentOS 7](#1)
 - [2. Tạo máy ảo để cài CentOs](#2)
